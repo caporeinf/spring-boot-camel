@@ -3,6 +3,7 @@ package com.home.demo.spring.boot.camel.app.rest;
 import org.apache.camel.Exchange;
 import org.apache.camel.LoggingLevel;
 import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.model.rest.RestBindingMode;
 import org.springframework.stereotype.Component;
 
 /**
@@ -15,6 +16,8 @@ public class CamelRestConfig extends RouteBuilder {
         restConfiguration().
                 component("servlet").
                 dataFormatProperty("prettyPrint","true").
+                bindingMode(RestBindingMode.json)
+                .jsonDataFormat("json-gson").
                 port(8080).
                 enableCORS(true).
                 apiContextPath("api-doc").
