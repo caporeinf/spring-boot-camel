@@ -16,8 +16,8 @@ public class CamelRestConfig extends RouteBuilder {
         restConfiguration().
                 component("servlet").
                 dataFormatProperty("prettyPrint","true").
-                bindingMode(RestBindingMode.json)
-                .jsonDataFormat("json-gson").
+                bindingMode(RestBindingMode.json).
+                jsonDataFormat("json-gson").
                 port(8080).
                 enableCORS(true).
                 apiContextPath("api-doc").

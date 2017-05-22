@@ -18,7 +18,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class MulticastAggregationRouteTest {
 
     @Autowired
-    ProducerTemplate producerTemplate;
+    private ProducerTemplate producerTemplate;
 
     private static Logger logger = LoggerFactory.getLogger(MulticastAggregationRouteTest.class);
     private boolean isCamelContextInitialized = false;
