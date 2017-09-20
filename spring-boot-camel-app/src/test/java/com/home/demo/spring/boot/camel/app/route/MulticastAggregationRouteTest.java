@@ -18,22 +18,25 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class MulticastAggregationRouteTest {
 
     @Autowired
-    ProducerTemplate producerTemplate;
+    private ProducerTemplate producerTemplate;
 
     private static Logger logger = LoggerFactory.getLogger(MulticastAggregationRouteTest.class);
-    private boolean isCamelContextInitialized = false;
 
     @Before
     public void initializeCamelContext() throws Exception {
-        if (!isCamelContextInitialized) {
-            logger.info("Waiting for Camel Context to become initialized.");
-            Thread.sleep(5000L);
-        }
+        logger.info("Waiting 5 seconds for Camel Context to become initialized.");
+        Thread.sleep(5000L);
     }
 
     @Test
-    public void testRoute() {
+    public void callMulticastRoute() {
         logger.info("Starting test.");
         producerTemplate.sendBody("direct:multicast", "body");
+    }
+
+    @Test
+    public void callMulticastRoute2() {
+        logger.info("Starting test.");
+        producerTemplate.sendBody("direct:multicast2", "body");
     }
 }
