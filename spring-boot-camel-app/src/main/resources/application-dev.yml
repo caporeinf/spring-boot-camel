@@ -11,7 +11,7 @@
 # ===================================================================
 spring:
   application:
-    name: spring-boot-camel
+    name: sbcamel
 server:
   context-path: /${spring.application.name}
   port: 8080

@@ -37,11 +37,11 @@
             <version>${camel.version}</version>
         </dependency>
         <!--for data formats-->
-        <dependency>
+        <!--<dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-jackson-starter</artifactId>
             <version>${camel.version}</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-gson-starter</artifactId>

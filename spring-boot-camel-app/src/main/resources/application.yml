@@ -12,7 +12,7 @@
 # ===================================================================
 spring:
   application:
-    name: spring-boot-camel
+    name: sbcamel
   profiles:
     active: @activatedProperties@
 server:
@@ -24,3 +24,19 @@ logging:
     org.apache.camel: warn
     org.springframework.web: warn
     root: warn
+
+# ===================================================================
+# Camel specific properties
+# ===================================================================
+camel:
+  component:
+    servlet:
+      mapping:
+        context-path: /api/*
+      servlet-name: CamelServlet
+    rest:
+      component-name: servlet
+  rest:
+    binding-mode: json
+    json-data-format: json-gson
+    component: servlet
