@@ -40,3 +40,8 @@ camel:
     binding-mode: json
     json-data-format: json-gson
     component: servlet
+    api-context-path: /api-doc
+    enable-cors: true
+    api-property:
+      api.title: Camel API
+      api.version: 1.0.0
