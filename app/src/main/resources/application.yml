@@ -43,5 +43,9 @@ camel:
     api-context-path: /api-doc
     enable-cors: true
     api-property:
+<<<<<<< HEAD:app/src/main/resources/application.yml
       api.title: Camel App Example
+=======
+      api.title: Camel API
+>>>>>>> aa5014654e8688a8d9a944ec3e0aeef6c0a0be28:spring-boot-camel-app/src/main/resources/application.yml
       api.version: 1.0.0
