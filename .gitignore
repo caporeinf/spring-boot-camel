@@ -25,3 +25,4 @@ nbdist/
 
 ### SO ###
 .directory
+.log*
